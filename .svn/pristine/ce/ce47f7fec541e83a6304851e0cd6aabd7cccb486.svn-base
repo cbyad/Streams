@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+apply plugin: 'application'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.8.v20171121'
+    compile group: 'org.eclipse.jetty', name: 'jetty-client', version: '9.4.8.v20171121'
+    compile group: 'io.projectreactor.ipc', name: 'reactor-netty', version: '0.7.2.RELEASE'
+    compile 'com.fasterxml.jackson.jr:jackson-jr-objects:2.9.3'
+}
+
+// Define the main class for the application
+mainClassName = 'stream_exercise.Main'
